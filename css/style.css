@@ -6,13 +6,6 @@
     margin: 0;
     padding: 0;
 }
-/*------------------------
-    Debug
--------------------------*/
-
-.debug footer {
-    background-color: yellowgreen;
-}
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -191,3 +184,20 @@ aside {
 /*----------------------
         Footer
 ----------------------*/
+.debug footer {
+    background-color: rgb(68, 68, 68);
+    height: 60px;
+}
+
+.footer-row{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: calc(100% / 3);
+}
+
+.left{
+    justify-content: space-between;
+    display: flex;
+}
+
