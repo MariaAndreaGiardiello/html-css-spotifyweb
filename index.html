@@ -5,22 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Fontawesome -->
     <title>Spotify Web</title>
 </head>
-<body>
+<body class="debug">
+    <!-- header in position fixed -->
     <header>
-        <div class="column">
-            <div class="main-menu">
-                <img class="logo" src="img/logo-small.svg" alt="">
-                <img class="home" src="img/home.svg" alt="">
-                <img class="search" src="img/search.svg" alt="">
-                <img class="library" src="img/libreria.svg" alt="">
-            </div>
-            <div class="settings">
-                <img class="logo" src="img/logo-small.svg" alt="">
-                <img class="home" src="img/home.svg" alt="">
-            </div>
-        </div>
+        <button>Effettua Upgrade</button>
     </header>
+    <!-- /header in position fixed -->
+    <main>
+        <!-- main-menu di sinistra -->
+        <aside>
+            <!-- logo -->
+            <div class="logo"><img src="img/logo-small.svg" alt=""></div>
+            <!-- logo -->
+
+            <!-- nav aside -->
+            <nav class="nav-aside">
+                <ul>
+                    <li><img class="home" src="img/home.svg" alt=""></li>
+                    <li><img class="search" src="img/search.svg" alt=""></li>
+                    <li><img class="library" src="img/libreria.svg" alt=""></li>
+                </ul>
+        
+
+             <!-- settings -->
+                <div class="settings">
+                    <ul>
+                        <li class="cirlce"><img class="download" src="img/download.svg" alt=""></li>
+                        <li class="circle"><img class="profile" src="img/profile.svg" alt=""></li>
+                    </ul>
+                </div>
+             <!-- /settings -->
+             
+            </nav>
+            <!-- /nav aside -->
+        </aside>
+        <!-- /main-menu di sinistra -->
+
+        <!-- contenuto principale -->
+        <div class="content">
+            
+        </div>
+        <!-- /contenuto principale -->
+    </main>
+    <footer></footer>
 </body>
 </html>
