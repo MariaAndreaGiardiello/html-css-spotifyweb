@@ -8,12 +8,19 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- /Fontawesome -->
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--/Google Font-->
+
     <title>Spotify Web</title>
 </head>
 <body class="debug">
     <!-- header in position fixed -->
     <header>
-        <button>Effettua Upgrade</button>
+        <a class="upgrade-button">EFFETTUA L'UPGRADE</a>
     </header>
     <!-- /header in position fixed -->
     <main>
@@ -35,12 +42,12 @@
              <!-- settings -->
                 <div class="settings">
                     <ul>
-                        <li class="cirlce"><img class="download" src="img/download.svg" alt=""></li>
+                        <li><img class="download" src="img/download.svg" alt=""></li>
                         <li class="circle"><img class="profile" src="img/profile.svg" alt=""></li>
                     </ul>
                 </div>
              <!-- /settings -->
-             
+
             </nav>
             <!-- /nav aside -->
         </aside>
@@ -48,7 +55,14 @@
 
         <!-- contenuto principale -->
         <div class="content">
-            
+            <div class="categories-row">
+                <div class="featured">IN EVIDENZA</div>
+                <div class="podcast">PODCAST</div>
+                <div class="charts">CLASSIFICHE</div>
+                <div class="genre-mood">GENERI E MOOD</div>
+                <div class="new-releases">NUOVE USCITE</div>
+                <div class="discover">SCOPRI</div>
+            </div>
         </div>
         <!-- /contenuto principale -->
     </main>

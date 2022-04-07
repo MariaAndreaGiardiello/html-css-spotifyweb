@@ -10,7 +10,7 @@
     Debug
 -------------------------*/
 .debug header {
-    background-color: aquamarine;
+    background-color: black;
 }
 
 .debug .content {
@@ -30,6 +30,10 @@
     background-color: darkgreen;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /*------------------------
     Header
 -------------------------*/
@@ -37,12 +41,23 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100% - 70px);
+    width: calc(100% - 60px);
     z-index: 10;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.upgrade-button{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 /*------------------------
@@ -53,8 +68,9 @@ main {
     height: calc(100vh - 80px);
 }
 
+/*------main menu sulla sinistra------*/
 aside {
-    min-width: 70px;
+    min-width: 60px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -70,12 +86,8 @@ aside {
 }
 
 .home, .search, .library{
-    width: 45px;
-    padding-top: 5px;
-}
-
-.fa-solid, .fa-gear{
-    color: white;
+    width: 30px;
+    padding-bottom: 5px;
 }
 
 .nav-aside {
@@ -89,29 +101,50 @@ aside {
 
 .settings {
     flex-shrink: 0;
-    margin-top: 880px;
+    margin-top: 325px;
 }
 
 .profile{
-    width: 45px;
+    width: 20px;
 }
 
 .download{
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+    width: 15px;
 }
 
 .circle{
     background-color: lightgray;
     text-align: center;
     border-radius: 100%;
+    padding: none;
+    margin: 0 15px;
 }
+/*------/main menu sulla sinistra------*/
 
-.download{
-    width: 30px;
-}
-
+/*------contenuto principale regole generali------*/
 .content {
-    width: calc(100% - 70px);
+    width: calc(100% - 60px);
     padding-top: 80px;
     overflow-y: auto;
 }
+/*------contenuto principale regole generali------*/
+
+/*------categorie------*/
+.categories-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
+    font-size: 8px;
+    padding-right: 10px;
+    line-height: 25px;
+    color: gray;
+}
+/*------/categorie------*/
+
+/*------playlist------*/
