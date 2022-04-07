@@ -9,29 +9,20 @@
 /*------------------------
     Debug
 -------------------------*/
-.debug header {
-    background-color: black;
-}
 
-.debug .content {
-    background-color:bisque;
-}
 .debug footer {
     background-color: yellowgreen;
-}
-.debug .logo {
-    background-color: black;
-}
-.debug .account {
-    background-color: blueviolet;
-}
-
-.debug .playlist {
-    background-color: darkgreen;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+}
+
+.row{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /*------------------------
@@ -47,6 +38,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: black;
+    opacity: 0.7;
 }
 
 .upgrade-button{
@@ -65,7 +58,7 @@ header {
 -------------------------*/
 main {
     display: flex;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
 }
 
 /*------main menu sulla sinistra------*/
@@ -101,7 +94,7 @@ aside {
 
 .settings {
     flex-shrink: 0;
-    margin-top: 325px;
+    margin-top: 350px;
 }
 
 .profile{
@@ -128,8 +121,9 @@ aside {
     width: calc(100% - 60px);
     padding-top: 80px;
     overflow-y: auto;
+    background-color: rgb(24, 24, 24);
 }
-/*------contenuto principale regole generali------*/
+/*------/contenuto principale regole generali------*/
 
 /*------categorie------*/
 .categories-row{
@@ -148,3 +142,52 @@ aside {
 /*------/categorie------*/
 
 /*------playlist------*/
+.playlist{
+    margin: 10px 10px;
+    width: calc((100% / 2) - 20px);
+    text-align: center;
+}
+
+.playlist-title{
+    margin-left: 10px;
+    margin-top: 20px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.song{
+    width: 137px;
+    height: 137px;
+}
+
+.song-title{
+    font-size: 12px;
+    color: white;
+}
+
+.song-subtitle{
+    font-size: 8px;
+    color: grey;
+    padding-top: 5px;
+}
+
+.first-row{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.subtitle{
+    font-size: 8px;
+    color: grey;
+    padding-top: 5px;
+    margin-left: 10px;
+    line-height: 5px;
+    padding-bottom: 15px;
+}
+/*------/playlist------*/
+
+/*----------------------
+        Footer
+----------------------*/
