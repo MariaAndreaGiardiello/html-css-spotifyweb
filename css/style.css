@@ -16,6 +16,7 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 /*------------------------
@@ -185,19 +186,109 @@ aside {
         Footer
 ----------------------*/
 .debug footer {
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(56, 55, 55);
     height: 60px;
 }
 
-.footer-row{    
+footer{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+}
+
+.left, .middle, .right{
+    display: flex;
+    align-items: center;
     width: calc(100% / 3);
+    justify-content: center;
 }
 
-.left{
-    justify-content: space-between;
+/*------colonna sx footer------*/
+
+.footer-song{
+    width: 30px;
+    margin: 15px 5px;
+    vertical-align: middle;
+}
+
+.footer-song-subtitle{
+    font-size: 8px;
+    color: gray;
+}
+
+h6{
+    color: white;
+}
+
+.icon-left{
+    font-size: 12px;
+    color: gray;
+    margin-left: 15px;
+}
+/*------/colonna sx footer------*/
+
+/*------colonna centrale footer------*/
+.fa-circle-play{
+    font-size: 25px;
+    padding: 0 6px;
+    color: white;
+}
+
+.fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
+    font-size: 20px;
+    color: white;
+}
+
+.fa-shuffle, .fa-forward-step{
+    margin-right: 3px;
+}
+
+.time{
     display: flex;
+    align-items: center;
+    padding-top: 5px;
 }
 
+.progress-bar{
+    width: 20%;
+    background-color: grey;
+    height: 3px;
+    border-radius: 25px;
+}
+
+.progress-container{
+    width: 85px;
+    height: 3px;
+    background-color: lightgray;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+}
+
+.song-time{
+    font-size: 5px;
+    color: white;
+}
+/*------/colonna centrale footer------*/
+
+/*------colonna destra footer------*/
+.fa-display, .fa-bars, .fa-volume-high{
+    font-size: 12px;
+    padding-right: 5px;
+    color: white;
+}
+
+.progress-bar-small{
+    width: 20%;
+    background-color: grey;
+    height: 3px;
+    border-radius: 25px;
+}
+
+.progress-container-small{
+    width: 50px;
+    height: 3px;
+    background-color: lightgray;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+}
+/*------colonna destra footer------*/
