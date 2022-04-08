@@ -19,276 +19,381 @@ body{
     align-items: center;
 }
 
-/*------------------------
-    Header
--------------------------*/
-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: calc(100% - 60px);
-    z-index: 10;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: black;
-    opacity: 0.7;
+@media  screen and (max-width:599px) {
+    /*------------------------
+        Header
+    -------------------------*/
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: calc(100% - 60px);
+        z-index: 10;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+    .upgrade-button{
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 25px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    /*------------------------
+        Main
+    -------------------------*/
+    main {
+        display: flex;
+        height: calc(100vh - 60px);
+    }
+
+    /*------main menu sulla sinistra------*/
+    aside {
+        min-width: 60px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .logo {
+        height: 70px;
+        flex-shrink: 0;
+        text-align: center;
+        padding: 10px 10px;
+    }
+
+    .logo-big{
+        display: none;
+    }
+
+    .home, .search, .library{
+        width: 30px;
+        padding-bottom: 5px;
+    }
+
+    .nav-aside {
+        flex-shrink: 0;
+    }
+
+    .playlist {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .settings {
+        flex-shrink: 0;
+        margin-top: 350px;
+    }
+
+    .profile{
+        width: 20px;
+    }
+
+    .download{
+        padding-bottom: 10px;
+        margin-right: 5px;
+        width: 15px;
+    }
+
+    .circle{
+        background-color: lightgray;
+        text-align: center;
+        border-radius: 100%;
+        padding: none;
+        margin: 0 15px;
+    }
+    /*------/main menu sulla sinistra------*/
+
+    /*------contenuto principale regole generali------*/
+    .content {
+        width: calc(100% - 60px);
+        padding-top: 80px;
+        overflow-y: auto;
+        background-color: rgb(24, 24, 24);
+    }
+    /*------/contenuto principale regole generali------*/
+
+    /*------categorie------*/
+    .categories-row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
+        font-size: 8px;
+        padding-right: 10px;
+        line-height: 25px;
+        color: gray;
+    }
+    /*------/categorie------*/
+
+    /*------playlist------*/
+    .playlist{
+        margin: 10px 10px;
+        width: calc((100% / 2) - 20px);
+        text-align: center;
+    }
+
+    .playlist-title{
+        margin-left: 10px;
+        margin-top: 20px;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .song{
+        width: 137px;
+        height: 137px;
+    }
+
+    .song-title{
+        font-size: 12px;
+        color: white;
+    }
+
+    .song-subtitle{
+        font-size: 8px;
+        color: grey;
+        padding-top: 5px;
+    }
+
+    .first-row{    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .subtitle{
+        font-size: 8px;
+        color: grey;
+        padding-top: 5px;
+        margin-left: 10px;
+        line-height: 5px;
+        padding-bottom: 15px;
+    }
+    /*------/playlist------*/
+
+    /*----------------------
+            Footer
+    ----------------------*/
+    .debug footer {
+        background-color: rgb(56, 55, 55);
+        height: 60px;
+    }
+
+    footer{
+        display: flex;
+    }
+
+    .left, .middle, .right{
+        display: flex;
+        align-items: center;
+        width: calc(100% / 3);
+        justify-content: center;
+    }
+
+    /*------colonna sx footer------*/
+
+    .footer-song{
+        width: 30px;
+        margin: 15px 5px;
+        vertical-align: middle;
+    }
+
+    .footer-song-subtitle{
+        font-size: 8px;
+        color: gray;
+    }
+
+    h6{
+        color: white;
+    }
+
+    .icon-left{
+        font-size: 12px;
+        color: gray;
+        margin-left: 15px;
+    }
+    /*------/colonna sx footer------*/
+
+    /*------colonna centrale footer------*/
+    .fa-circle-play{
+        font-size: 25px;
+        padding: 0 6px;
+        color: white;
+    }
+
+    .fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
+        font-size: 20px;
+        color: white;
+    }
+
+    .fa-shuffle, .fa-forward-step{
+        margin-right: 3px;
+    }
+
+    .time{
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+    }
+
+    .progress-bar{
+        width: 20%;
+        background-color: grey;
+        height: 3px;
+        border-radius: 25px;
+    }
+
+    .progress-container{
+        width: 85px;
+        height: 3px;
+        background-color: lightgray;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 25px;
+    }
+
+    .song-time{
+        font-size: 5px;
+        color: white;
+    }
+    /*------/colonna centrale footer------*/
+
+    /*------colonna destra footer------*/
+    .fa-display, .fa-bars, .fa-volume-high{
+        font-size: 12px;
+        padding-right: 5px;
+        color: white;
+    }
+
+    .progress-bar-small{
+        width: 20%;
+        background-color: grey;
+        height: 3px;
+        border-radius: 25px;
+    }
+
+    .progress-container-small{
+        width: 50px;
+        height: 3px;
+        background-color: lightgray;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 25px;
+    }
+    /*------colonna destra footer------*/
 }
 
-.upgrade-button{
-    color: white;
-    text-align: center;
-    border: 1px solid white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 25px;
-    margin-right: 10px;
-    font-size: 12px;
-}
+/*-------------------------------
+Visualizzazione schermo > 600px
+-------------------------------*/
+@media only screen and (min-width:600px) {
+    /*------------------------
+        Header
+    -------------------------*/
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: calc(100% - 30%);
+        z-index: 10;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: black;
+        opacity: 0.7;
+    }
 
-/*------------------------
-    Main
--------------------------*/
-main {
-    display: flex;
-    height: calc(100vh - 60px);
-}
+    .upgrade-button{
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 25px;
+        margin-right: 10px;
+        font-size: 12px;
+    } 
+    /*------------------------
+        Main
+    -------------------------*/
+    main {
+        display: flex;
+        height: calc(100vh - 60px);
+    }
 
-/*------main menu sulla sinistra------*/
-aside {
-    min-width: 60px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    text-align: center;
-    vertical-align: middle;
-}
-.logo {
-    height: 70px;
-    flex-shrink: 0;
-    text-align: center;
-    padding: 10px 10px;
-}
+    /*------main menu sulla sinistra------*/
+    aside {
+        min-width: 30%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .logo-big {
+        height: 70px;
+        flex-shrink: 0;
+        text-align: center;
+        padding: 25px 25px;
+    }
 
-.home, .search, .library{
-    width: 30px;
-    padding-bottom: 5px;
-}
+    .logo{
+        display: none;
+    }
 
-.nav-aside {
-    flex-shrink: 0;
-}
+    .home, .search, .library{
+        width: 25px;
+        padding-bottom: 5px;
+    }
 
-.playlist {
-    flex-grow: 1;
-    overflow-y: auto;
-}
+    .nav-aside {
+        flex-shrink: 0;
+        text-align: left;
+    }
 
-.settings {
-    flex-shrink: 0;
-    margin-top: 350px;
-}
+    .playlist {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
 
-.profile{
-    width: 20px;
-}
+    .settings {
+        flex-shrink: 0;
+    }
 
-.download{
-    padding-bottom: 10px;
-    margin-right: 5px;
-    width: 15px;
-}
+    .profile{
+        width: 20px;
+    }
 
-.circle{
-    background-color: lightgray;
-    text-align: center;
-    border-radius: 100%;
-    padding: none;
-    margin: 0 15px;
-}
-/*------/main menu sulla sinistra------*/
+    .download{
+        padding-bottom: 10px;
+        margin-right: 5px;
+        width: 15px;
+    }
 
-/*------contenuto principale regole generali------*/
-.content {
-    width: calc(100% - 60px);
-    padding-top: 80px;
-    overflow-y: auto;
-    background-color: rgb(24, 24, 24);
+    .circle{
+        background-color: lightgray;
+        text-align: center;
+        border-radius: 100%;
+        padding: none;
+        margin: 0 15px;
+    }
+    /*------/main menu sulla sinistra------*/
 }
-/*------/contenuto principale regole generali------*/
-
-/*------categorie------*/
-.categories-row{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
-    font-size: 8px;
-    padding-right: 10px;
-    line-height: 25px;
-    color: gray;
-}
-/*------/categorie------*/
-
-/*------playlist------*/
-.playlist{
-    margin: 10px 10px;
-    width: calc((100% / 2) - 20px);
-    text-align: center;
-}
-
-.playlist-title{
-    margin-left: 10px;
-    margin-top: 20px;
-    color: white;
-    flex-shrink: 0;
-}
-
-.song{
-    width: 137px;
-    height: 137px;
-}
-
-.song-title{
-    font-size: 12px;
-    color: white;
-}
-
-.song-subtitle{
-    font-size: 8px;
-    color: grey;
-    padding-top: 5px;
-}
-
-.first-row{    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.subtitle{
-    font-size: 8px;
-    color: grey;
-    padding-top: 5px;
-    margin-left: 10px;
-    line-height: 5px;
-    padding-bottom: 15px;
-}
-/*------/playlist------*/
-
-/*----------------------
-        Footer
-----------------------*/
-.debug footer {
-    background-color: rgb(56, 55, 55);
-    height: 60px;
-}
-
-footer{
-    display: flex;
-}
-
-.left, .middle, .right{
-    display: flex;
-    align-items: center;
-    width: calc(100% / 3);
-    justify-content: center;
-}
-
-/*------colonna sx footer------*/
-
-.footer-song{
-    width: 30px;
-    margin: 15px 5px;
-    vertical-align: middle;
-}
-
-.footer-song-subtitle{
-    font-size: 8px;
-    color: gray;
-}
-
-h6{
-    color: white;
-}
-
-.icon-left{
-    font-size: 12px;
-    color: gray;
-    margin-left: 15px;
-}
-/*------/colonna sx footer------*/
-
-/*------colonna centrale footer------*/
-.fa-circle-play{
-    font-size: 25px;
-    padding: 0 6px;
-    color: white;
-}
-
-.fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
-    font-size: 20px;
-    color: white;
-}
-
-.fa-shuffle, .fa-forward-step{
-    margin-right: 3px;
-}
-
-.time{
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-}
-
-.progress-bar{
-    width: 20%;
-    background-color: grey;
-    height: 3px;
-    border-radius: 25px;
-}
-
-.progress-container{
-    width: 85px;
-    height: 3px;
-    background-color: lightgray;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 25px;
-}
-
-.song-time{
-    font-size: 5px;
-    color: white;
-}
-/*------/colonna centrale footer------*/
-
-/*------colonna destra footer------*/
-.fa-display, .fa-bars, .fa-volume-high{
-    font-size: 12px;
-    padding-right: 5px;
-    color: white;
-}
-
-.progress-bar-small{
-    width: 20%;
-    background-color: grey;
-    height: 3px;
-    border-radius: 25px;
-}
-
-.progress-container-small{
-    width: 50px;
-    height: 3px;
-    background-color: lightgray;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 25px;
-}
-/*------colonna destra footer------*/
