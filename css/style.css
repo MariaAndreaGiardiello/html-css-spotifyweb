@@ -9,9 +9,6 @@
 /*------------------------
     Debug
 -------------------------*/
-.debug header {
-    background-color: aquamarine;
-}
 .debug aside {
     background-color: black;
 }
@@ -52,6 +49,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.upgrade-button{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 /*------------------------
