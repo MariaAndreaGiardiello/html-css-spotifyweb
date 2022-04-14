@@ -6,1083 +6,331 @@
     margin: 0;
     padding: 0;
 }
-
-body{
-    font-family: 'Montserrat', sans-serif;
+/*------------------------
+    Debug
+-------------------------*/
+.debug header {
+    background-color: aquamarine;
+}
+.debug aside {
+    background-color: black;
+}
+.debug .content {
+    background-color:bisque;
+}
+.debug footer {
+    background-color: yellowgreen;
+}
+.debug .logo {
     background-color: black;
 }
 
-.row{    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
+li:hover{
+    border-left: 2px solid green;
+    color: white;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*------------------------
+    Header
+-------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 300px);
+    z-index: 10;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*------------------------
+    Main
+-------------------------*/
+main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/*------ aside ------*/
+aside {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    height: 70px;
+    flex-shrink: 0;
+    padding: 10px 20px;
+
+}
+.logo img {
+    max-width: 100%;
+    height: 50px;
+}
+
+/*------ main-menu ------*/
+.nav-aside {
+    flex-shrink: 0;
+    padding: 10px 0;
+}
+
+.main-menu-text{
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+    padding-left: 20px;
+}
+
+.home, .search, .library{
+    width: 30px;
+    padding-bottom: 5px;
+}
+
+.nav-aside ul {
+    list-style: none;
+}
+.nav-aside ul li a {
+    display: flex;
+    align-items: center;
+}
+.nav-aside ul li a img {
+    height: 30px;
+}
+/*------ /main-menu ------*/
+
+/*------ playlist aside ------*/
 .row-left{    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     vertical-align: middle;
 }
-@media  screen and (max-width:599px) {
-    /*------------------------
-        Header
-    -------------------------*/
-    header {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: calc(100% - 60px);
-        z-index: 10;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: black;
-        opacity: 0.7;
-    }
 
-    .upgrade-button{
-        color: white;
-        text-align: center;
-        border: 1px solid white;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 25px;
-        margin-right: 10px;
-        font-size: 12px;
-    }
-
-    /*------------------------
-        Main
-    -------------------------*/
-    main {
-        display: flex;
-        height: calc(100vh - 60px);
-    }
-
-    /*------main menu sulla sinistra------*/
-    aside {
-        min-width: 60px;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    .square, .playlist-subtitle, h5, .fa-plus, .playlist-choose, .profile-name, .text-download, hr{
-        display: none;
-    }
-
-    .logo {
-        height: 70px;
-        flex-shrink: 0;
-        text-align: center;
-        padding: 10px 10px;
-    }
-
-    .logo-big{
-        display: none;
-    }
-
-    .home, .search, .library{
-        width: 30px;
-        padding-bottom: 5px;
-    }
-
-    .nav-aside {
-        flex-shrink: 0;
-    }
-
-    li:hover{
-        border-left: 2px solid green;
-        color: white;
-        font-weight: bold;
-    }
-
-    .main-menu-text{
-        display: none;
-    }
-
-    .playlist {
-        flex-grow: 1;
-        overflow-y: auto;
-    }
-
-    .playlist-aside{
-        display: none;
-    }
-
-    .settings {
-        flex-shrink: 0;
-        margin-top: 350px;
-    }
-
-    .profile{
-        width: 25px;
-    }
-
-    .download{
-        padding-bottom: 10px;
-        margin-right: 5px;
-        width: 15px;
-    }
-
-    .circle{
-        background-color: lightgray;
-        text-align: center;
-        border-radius: 100%;
-        padding: none;
-        margin: 0 15px;
-    }
-    /*------/main menu sulla sinistra------*/
-
-    /*------contenuto principale regole generali------*/
-    .content {
-        width: calc(100% - 60px);
-        padding-top: 80px;
-        overflow-y: auto;
-        background-color: rgb(24, 24, 24);
-    }
-    /*------/contenuto principale regole generali------*/
-
-    /*------categorie------*/
-    .categories-row{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
-        font-size: 8px;
-        padding-right: 10px;
-        line-height: 25px;
-        color: gray;
-    }
-
-    .featured:hover, .podcast:hover, .charts:hover, .discover:hover, .new-releases:hover, .genre-mood:hover{
-        border-bottom: 1px solid green;
-    }
-    /*------/categorie------*/
-
-    /*------playlist------*/
-    .playlist{
-        margin: 10px 10px;
-        width: calc((100% / 2) - 20px);
-        text-align: center;
-    }
-
-    .playlist-title{
-        margin-left: 10px;
-        margin-top: 20px;
-        color: white;
-        flex-shrink: 0;
-    }
-
-    .song{
-        width: 137px;
-        height: 137px;
-    }
-
-    .song-title{
-        font-size: 12px;
-        color: white;
-    }
-
-    .song-subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-    }
-
-    .first-row{    
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-        margin-left: 10px;
-        line-height: 5px;
-        padding-bottom: 15px;
-    }
-    /*------/playlist------*/
-
-    /*----------------------
-            Footer
-    ----------------------*/
-    .debug footer {
-        background-color: rgb(56, 55, 55);
-        height: 60px;
-    }
-
-    footer{
-        display: flex;
-    }
-
-    .left, .middle, .right{
-        display: flex;
-        align-items: center;
-        width: calc(100% / 3);
-        justify-content: center;
-    }
-
-    /*------colonna sx footer------*/
-
-    .footer-song{
-        width: 30px;
-        margin: 15px 5px;
-        vertical-align: middle;
-    }
-
-    .footer-song-subtitle{
-        font-size: 8px;
-        color: gray;
-    }
-
-    h6{
-        color: white;
-    }
-
-    .icon-left{
-        font-size: 12px;
-        color: gray;
-        margin-left: 15px;
-    }
-    /*------/colonna sx footer------*/
-
-    /*------colonna centrale footer------*/
-    .fa-circle-play{
-        font-size: 25px;
-        padding: 0 6px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
-        font-size: 20px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-forward-step{
-        margin-right: 3px;
-    }
-
-    .time{
-        display: flex;
-        align-items: center;
-        padding-top: 5px;
-    }
-
-    .progress-bar{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container{
-        width: 85px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
-    }
-
-    .song-time{
-        font-size: 5px;
-        color: white;
-    }
-    /*------/colonna centrale footer------*/
-
-    /*------colonna destra footer------*/
-    .fa-display, .fa-bars, .fa-volume-high{
-        font-size: 12px;
-        padding-right: 5px;
-        color: white;
-    }
-
-    .progress-bar-small{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container-small{
-        width: 50px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
-    }
-    /*------colonna destra footer------*/
+.fa-plus{
+    font-size: 15px;
+    padding-top: 10px;
 }
 
-/*-------------------------------
-Visualizzazione schermo > 600px
--------------------------------*/
-@media only screen and (min-width:700px) {
-    /*------------------------
-        Header
-    -------------------------*/
-    header {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: calc(100% - 30%);
-        z-index: 10;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: black;
-        opacity: 0.7;
-    }
-
-    .upgrade-button{
-        color: white;
-        text-align: center;
-        border: 1px solid white;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 25px;
-        margin-right: 10px;
-        font-size: 12px;
-    } 
-    /*------------------------
-        Main
-    -------------------------*/
-    main {
-        display: flex;
-        height: calc(100vh - 60px);
-    }
-
-    /*------main menu sulla sinistra------*/
-    aside {
-        min-width: 30%;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .logo-big {
-        height: 70px;
-        flex-shrink: 0;
-        text-align: center;
-        padding: 25px 20px;
-        margin-bottom: 20px;
-    }
-
-    .logo{
-        display: none;
-    }
-
-    .home, .search, .library{
-        width: 25px;
-        padding-bottom: 5px;
-        vertical-align: middle;
-        margin-left: 25px;
-    }
-
-    .main-menu-text{
-        color: lightgray;
-        padding-top: 5px;
-        padding-left: 10px;
-        font-size: 12px;
-    }
-
-    .main-menu{
-        margin-top: 10px;
-    }
-
-    li:hover{
-        border-left: 2px solid green;
-        color: white;
-        font-weight: bold;
-    }
-
-    .nav-aside {
-        flex-shrink: 0;
-        vertical-align: middle;
-        text-align: left;
-    }
-
-    li{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .fa-plus{
-        font-size: 15px;
-        padding-top: 10px;
-    }
-
-    .square{
-        width: 35px;
-        height: 35px;
-        background-color: gray;
-        text-align: center;
-        margin-left: 25px;
-        margin-top: 10px;
-    }
-
-    h5{
-        color: white;
-        margin-left: 25px;
-        margin-top: 15px;
-    }
-    
-    .playlist-subtitle{
-        color: grey;
-        margin-top: 18px;
-        padding-left: 6px;
-        font-size: 12px;
-    }
-
-    .playlist {
-        flex-grow: 1;
-        overflow-y: auto;
-    }
-
-    .playlist-choose{
-        color: grey;
-        font-size: 12px;
-        margin-left: 25px;
-        margin-top: 15px;
-        text-decoration: none;
-    }
-
-    .settings {
-        flex-shrink: 0;
-        margin-top: 60px;
-    }
-
-    .profile{
-        width: 20px;
-        height: 20px;
-        margin-left: 25px;
-    }
-
-    .profile-name{
-        color: white;
-        font-size: 13px;
-        padding-left: 5px;
-        font-weight: bold;
-        padding-top: 2px;
-    }
-    
-    .download{
-        padding-bottom: 10px;
-        width: 15px;
-        margin-left: 25px;
-    }
-
-    .text-download{
-        color: grey;
-        font-size: 12px;
-        padding-left: 5px;
-        font-weight: bold;
-    }
-
-    hr{
-        color: gray;
-        size: 0.5px;
-        margin-bottom: 10px;
-    }
-
-    .circle{
-        background-color: grey;
-        text-align: center;
-        border-radius: 100%;
-        padding: 2px 2px;
-    }
-    /*------/main menu sulla sinistra------*/
-
-    /*------contenuto principale regole generali------*/
-    .content {
-        width: calc(100% - 60px);
-        padding-top: 80px;
-        overflow-y: auto;
-        background-color: rgb(24, 24, 24);
-    }
-    /*------/contenuto principale regole generali------*/
-
-    /*------categorie------*/
-    .categories-row{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
-        font-size: 8px;
-        padding-right: 10px;
-        line-height: 25px;
-        color: gray;
-    }
-
-    .featured:hover, .podcast:hover, .charts:hover, .discover:hover, .new-releases:hover, .genre-mood:hover{
-        border-bottom: 1px solid green;
-    }
-    /*------/categorie------*/
-
-    /*------playlist------*/
-    .playlist{
-        margin: 10px auto;
-        width: calc((100% / 2) - 20px);
-        text-align: center;
-    }
-
-    .playlist-title{
-        margin-left: 10px;
-        margin-top: 20px;
-        color: white;
-        flex-shrink: 0;
-    }
-
-    .song{
-        width: 137px;
-        height: 137px;
-    }
-
-    .song-title{
-        font-size: 12px;
-        color: white;
-    }
-
-    .song-subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-    }
-
-    .first-row{    
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-        margin-left: 10px;
-        line-height: 5px;
-        padding-bottom: 15px;
-    }
-    /*------/playlist------*/
-        /*----------------------
-            Footer
-    ----------------------*/
-    .debug footer {
-        background-color: rgb(56, 55, 55);
-        height: 60px;
-    }
-
-    footer{
-        display: flex;
-    }
-
-    .left, .middle, .right{
-        display: flex;
-        align-items: center;
-        width: calc(100% / 3);
-        justify-content: center;
-    }
-
-    .left, .middle{
-        margin-right: 40px;
-    }
-
-    /*------colonna sx footer------*/
-
-    .footer-song{
-        width: 30px;
-        margin: 15px 5px;
-        vertical-align: middle;
-    }
-
-    .footer-song-subtitle{
-        font-size: 8px;
-        color: gray;
-    }
-    
-    br{
-        display: none;
-    }
-
-    h6{
-        color: white;
-    }
-
-    .icon-left{
-        font-size: 12px;
-        color: gray;
-        margin-left: 15px;
-    }
-    /*------/colonna sx footer------*/
-
-    /*------colonna centrale footer------*/
-    .fa-circle-play{
-        font-size: 25px;
-        padding: 0 15px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
-        font-size: 20px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-forward-step{
-        margin-right: 15px;
-    }
-
-    .time{
-        display: flex;
-        align-items: center;
-        padding-top: 5px;
-    }
-
-    .progress-bar{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container{
-        width: 130px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
-    }
-
-    .song-time{
-        font-size: 7px;
-        color: white;
-    }
-    /*------/colonna centrale footer------*/
-
-    /*------colonna destra footer------*/
-    .fa-display, .fa-bars, .fa-volume-high{
-        font-size: 12px;
-        padding-right: 5px;
-        color: white;
-    }
-
-    .progress-bar-small{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container-small{
-        width: 70px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
-    }
-    /*------colonna destra footer------*/
-
+.square{
+    width: 35px;
+    height: 35px;
+    background-color: gray;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 10px;
 }
 
-/*-------------------------------
-Visualizzazione schermo > 1000px
--------------------------------*/
+h6{
+    color: white;
+    margin-left: 25px;
+    margin-top: 15px;
+}
 
+.playlist-subtitle{
+    color: grey;
+    margin-top: 18px;
+    padding-left: 6px;
+    font-size: 12px;
+}
 
-@media only screen and (max-width:1000px) {
-    /*------------------------
-        Header
-    -------------------------*/
-    header {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: calc(100% - 30%);
-        z-index: 10;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: black;
-        opacity: 0.7;
+.playlist {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.playlist-choose{
+    color: grey;
+    font-size: 12px;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.playlist-list{
+    line-height: 25px;
+    margin-top: 10px;
+}
+/*------ /playlist aside ------*/
+
+/*------ settings ------*/
+.settings {
+    flex-shrink: 0;
+}
+
+.text-download{
+    color: grey;
+    font-size: 12px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.profile-name{
+    color: white;
+    font-size: 13px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.profile{
+    padding: 5px 5px;
+    margin-left: 17px;
+}
+
+.download{
+    margin-right: 5px;
+    width: 15px;
+    margin-left: 20px;
+}
+
+.circle{
+    background-color: lightgray;
+    text-align: center;  
+    width: 25px;
+    border-radius: 100%;
+}
+
+.settings ul {
+    list-style: none;
+}
+.settings ul li a {
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    margin: 10px 0;
+}
+
+ul{
+    margin-bottom: 5px;
+}
+/*------ settings ------*/
+
+/*------ /aside ------*/
+
+.content {
+    width: calc(100% - 300px);
+    padding: 80px 20px 0 20px;
+    overflow-y: auto;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+}
+.album {
+    width: calc(100% / 6 - 10px);
+    margin: 5px;
+    text-align: center;
+    background-color: lightsteelblue;
+}
+.album img {
+    width: 100%;
+    display: block;
+}
+.album-image {
+    position: relative;
+}
+.album-image::after {
+    content: "\f144";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 60px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.album:hover .album-image::after {
+    opacity: 1;
+}
+/*------------------------
+    Footer
+-------------------------*/
+footer {
+    height: 80px;
+    display: flex;
+}
+.footer-left,.footer-right {
+    width: 25%;
+}
+.footer-center {
+    width: 50%;
+}
+.play {
+    display: flex;
+    align-items: center;
+}
+.play-time {
+    font-size: 14px;
+}
+.play-bar {
+    height: 3px;
+    background-color: lightgray;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+.play-bar-inner {
+    background-color: gray;
+    width: 9%;
+    height: 100%;
+}
+
+/*-------------------------
+    Helpers
+---------------------------*/
+.show-mobile {
+    display: none;
+}
+
+/*------------------------
+    Responsive
+-------------------------*/
+@media screen and (max-width: 1100px) {
+    .album {
+        width: calc(100% / 4 - 10px);
     }
+}
 
-    .upgrade-button{
-        color: white;
-        text-align: center;
-        border: 1px solid white;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 25px;
-        margin-right: 10px;
-        font-size: 12px;
-    } 
-    /*------------------------
-        Main
-    -------------------------*/
-    main {
-        display: flex;
-        height: calc(100vh - 60px);
+@media screen and (max-width: 700px) {
+    .album {
+        width: calc(100% / 2 - 10px);
     }
-
-    /*------main menu sulla sinistra------*/
+}
+/* vw <= 600px */
+@media screen and (max-width: 600px) {
+    .show-mobile {
+        display: block;
+    }
+    .hide-mobile {
+        display: none;
+    }
     aside {
-        min-width: 30%;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .logo-big {
-        flex-shrink: 0;
-        text-align: center;
-        padding: 35px 30px;
-        margin-bottom: 30px;
-    }
-
-    .logo{
-        display: none;
-    }
-
-    .home, .search, .library{
-        width: 25px;
-        padding-bottom: 5px;
-        vertical-align: middle;
-        margin-left: 25px;
-    }
-
-    .main-menu-text{
-        color: lightgray;
-        padding-top: 5px;
-        padding-left: 10px;
-        font-size: 12px;
-    }
-
-    .main-menu{
-        margin-top: 10px;
-    }
-
-    li:hover{
-        border-left: 2px solid green;
-        color: white;
-        font-weight: bold;
-    }
-
-    .nav-aside {
-        flex-shrink: 0;
-        vertical-align: middle;
-        text-align: left;
-    }
-
-    li{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .fa-plus{
-        font-size: 15px;
-        padding-top: 10px;
-    }
-
-    .square{
-        width: 35px;
-        height: 35px;
-        background-color: gray;
-        text-align: center;
-        margin-left: 25px;
-        margin-top: 10px;
-    }
-
-    h5{
-        color: white;
-        margin-left: 25px;
-        margin-top: 15px;
-    }
-    
-    .playlist-subtitle{
-        color: grey;
-        margin-top: 18px;
-        padding-left: 6px;
-        font-size: 12px;
-    }
-
-    .playlist {
-        flex-grow: 1;
-        overflow-y: auto;
-    }
-
-    .playlist-choose{
-        color: grey;
-        font-size: 12px;
-        margin-left: 25px;
-        margin-top: 15px;
-        text-decoration: none;
-    }
-
-    .settings {
-        flex-shrink: 0;
-        margin-top: 60px;
-    }
-
-    .profile{
-        width: 20px;
-        height: 20px;
-        margin-left: 25px;
-    }
-
-    .profile-name{
-        color: white;
-        font-size: 13px;
-        padding-left: 5px;
-        font-weight: bold;
-        padding-top: 2px;
-    }
-    
-    .download{
-        padding-bottom: 10px;
-        width: 15px;
-        margin-left: 25px;
-    }
-
-    .text-download{
-        color: grey;
-        font-size: 12px;
-        padding-left: 5px;
-        font-weight: bold;
-    }
-
-    hr{
-        color: gray;
-        size: 0.5px;
-        margin-bottom: 10px;
-    }
-
-    .circle{
-        background-color: grey;
-        text-align: center;
-        border-radius: 100%;
-        padding: 2px 2px;
-    }
-    /*------/main menu sulla sinistra------*/
-
-    /*------contenuto principale regole generali------*/
-    .content {
-        width: calc(100% - 60px);
-        padding-top: 80px;
-        overflow-y: auto;
-        background-color: rgb(24, 24, 24);
-    }
-    /*------/contenuto principale regole generali------*/
-
-    /*------categorie------*/
-    .categories-row{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .featured, .podcast, .charts, .discover, .new-releases, .genre-mood{
-        font-size: 8px;
-        padding:auto 10px;
-        line-height: 25px;
-        color: gray;
-    }
-
-    .featured:hover, .podcast:hover, .charts:hover, .discover:hover, .new-releases:hover, .genre-mood:hover{
-        border-bottom: 1px solid green;
-    }
-    /*------/categorie------*/
-
-    /*------playlist------*/
-    .playlist{
-        margin: 10px 10px;
-        width: calc((100% / 4) - 20px);
-        text-align: left;
-
-    }
-
-    .playlist-title{
-        margin-left: 10px;
-        margin-top: 20px;
-        color: white;
-        flex-shrink: 0;
-    }
-
-    .song{
-        height: 110px;
-    }
-
-    .song-title{
-        font-size: 12px;
-        color: white;
-        text-align: center;
-    }
-
-    .song-subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-        text-align: center;
-    }
-
-    .first-row{    
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    .subtitle{
-        font-size: 8px;
-        color: grey;
-        padding-top: 5px;
-        margin-left: 10px;
-        line-height: 5px;
-        padding-bottom: 15px;
-    }
-    /*------/playlist------*/
-        /*----------------------
-            Footer
-    ----------------------*/
-    .debug footer {
-        background-color: rgb(56, 55, 55);
-        height: 60px;
-    }
-
-    footer{
-        display: flex;
-    }
-
-    .left, .middle, .right{
-        display: flex;
-        align-items: center;
-        width: calc(100% / 3);
-        justify-content: center;
-    }
-
-    .left, .middle{
-        margin-right: 40px;
-    }
-
-    /*------colonna sx footer------*/
-
-    .footer-song{
-        width: 30px;
-        margin: 15px 5px;
-        vertical-align: middle;
-    }
-
-    .footer-song-subtitle{
-        font-size: 8px;
-        color: gray;
-    }
-    
-    br{
-        display: none;
-    }
-
-    h6{
-        color: white;
-    }
-
-    .icon-left{
-        font-size: 12px;
-        color: gray;
-        margin-left: 15px;
-    }
-    /*------/colonna sx footer------*/
-
-    /*------colonna centrale footer------*/
-    .fa-circle-play{
-        font-size: 25px;
-        padding: 0 15px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-rotate-right{
-        font-size: 20px;
-        color: white;
-    }
-
-    .fa-shuffle, .fa-forward-step{
-        margin-right: 15px;
-    }
-
-    .time{
-        display: flex;
-        align-items: center;
-        padding-top: 5px;
-    }
-
-    .progress-bar{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container{
-        width: 130px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
-    }
-
-    .song-time{
-        font-size: 7px;
-        color: white;
-    }
-    /*------/colonna centrale footer------*/
-
-    /*------colonna destra footer------*/
-    .fa-display, .fa-bars, .fa-volume-high{
-        font-size: 12px;
-        padding-right: 5px;
-        color: white;
-    }
-
-    .progress-bar-small{
-        width: 20%;
-        background-color: grey;
-        height: 3px;
-        border-radius: 25px;
-    }
-
-    .progress-container-small{
         width: 70px;
-        height: 3px;
-        background-color: lightgray;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 25px;
+    } 
+    header, .content {
+        width: calc(100% - 70px);
     }
-    /*------colonna destra footer------*/
-
 }

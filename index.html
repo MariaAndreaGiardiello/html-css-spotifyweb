@@ -1,201 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- /Fontawesome -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify Web</title>
+        <!--Fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--/Fontawesome-->
+        <link rel="stylesheet" href="css/style.css">
 
-    <!--Google Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--/Google Font-->
-
-    <title>Spotify Web</title>
-</head>
-<body class="debug">
-    <!-- header in position fixed -->
-    <header>
-        <a class="upgrade-button">EFFETTUA L'UPGRADE</a>
-    </header>
-    <!-- /header in position fixed -->
-    <main>
-        <!-- main-menu di sinistra -->
-        <aside>
-            <!-- logo -->
-            <div class="logo"><img src="img/logo-small.svg" alt=""></div>
-            <div class="logo-big"><img src="img/logo.svg" alt=""></div>
-            <!-- logo -->
-
-            <!-- nav aside -->
-            <nav class="nav-aside">
-             <!--main-menu-->   
-                <ul class="main-menu">
-                    <li><img class="home" src="img/home.svg" alt=""><div class="main-menu-text">Home</div></li>
-                    <li><img class="search" src="img/search.svg" alt=""><div class="main-menu-text">Cerca</div></li>
-                    <li><img class="library" src="img/libreria.svg" alt=""><div class="main-menu-text">La tua libreria</div></li>
-                </ul>
-             <!--/main-menu-->
-             
-             <!--playlist-aside-->
-             <div class="playlist-aside">
-                 <h5>PLAYLIST</h5>
-                    <div class="row-left">
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+        <!--/Google Font-->
+    </head>
+    <body class="debug">
+        <!-- header in position fixed -->
+        <header>
+            <button>Effettua Upgrade</button>
+        </header>
+        <!-- /header in position fixed -->
+        <main>
+            <!-- sidebar di sinistra -->
+            <aside>
+                <!-- logo -->
+                <div class="logo">
+                    <img class="hide-mobile" src="img/logo.svg" alt="Logo">
+                    <img class="show-mobile" src="img/logo-small.svg" alt="Logo Mobile">
+                </div>
+                <!-- logo -->
+                <!-- nav aside -->
+                <nav class="nav-aside">
+                    <ul>
+                        <li><a class="main-menu-text" href="#"><img class="home" src="img/home.svg"> <span class="hide-mobile">Home</span></a></li>
+                        <li><a class="main-menu-text"  href="#"><img class="search" src="img/search.svg"> <span class="hide-mobile">Cerca</span></a></li>
+                        <li><a class="main-menu-text"  href="#"><img class="library" src="img/libreria.svg"> <span class="hide-mobile">La tua libreria</span></a></li>
+                    </ul>
+                </nav>
+                <!-- /nav aside -->
+                <!-- playlist -->
+                <div class="playlist">
+                    <h6 class="hide-mobile">PLAYLIST</h6>
+                    <div class="hide-mobile row-left">
                         <div class="square">
                             <i class="fa-solid fa-plus"></i>
                         </div>
 
                         <div class="playlist-subtitle">Crea Playlist</div>
                     </div>
-
-                    <ul>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
-                        <li><a class="playlist-choose" href="">Nome playlist</a></li>
+                    <ul class="playlist-list hide-mobile">
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
+                        <li><a class="playlist-choose" href="#">Nome Playlist</a></li>
                     </ul>
-             </div>
-
-             <!-- settings -->
+                </div>
+                <!-- /playlist -->
+                <!-- settings -->
                 <div class="settings">
                     <ul>
-                        <li><img class="download" src="img/download.svg" alt=""><span class="text-download">Istalla app</span></li>
-                        <hr>
-                        <li><img class="profile circle" src="img/profile.svg" alt=""><span class="profile-name">John Doe</span></li>
+                        <li><a href=""><img class="download" src="img/download.svg" alt=""><span class="hide-mobile text-download">Istalla app</span></a></li>
+                        <hr class="hide-mobile">
+                        <li><a href=""><img class="profile circle" src="img/profile.svg" alt=""><span class="hide-mobile profile-name">John Doe</span></a></li>
                     </ul>
                 </div>
-             <!-- /settings -->
-
-            </nav>
-            <!-- /nav aside -->
-        </aside>
-        <!-- /main-menu di sinistra -->
-
-        <!-- contenuto principale -->
-        <div class="content">
-            <!--categorie-->
-            <div class="categories-row">
-                <div class="featured">IN EVIDENZA</div>
-                <div class="podcast">PODCAST</div>
-                <div class="charts">CLASSIFICHE</div>
-                <div class="genre-mood">GENERI E MOOD</div>
-                <div class="new-releases">NUOVE USCITE</div>
-                <div class="discover">SCOPRI</div>
-            </div>
-            <!--categorie-->
-
-            <!--playlist-->
-            <h4 class="playlist-title">Recently played</h4>
-            <div class="first-row">
-                <div class="playlist">
-                    <img class="song" src="img/metal_lifting.jpg" alt="">
-                    <div class="song-title"><strong>Heavy Metal</strong></div>
-                    <div class="song-subtitle">Subtitle</div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/stranger.jpeg" alt="">
-                    <div class="song-title"><strong>Stranger Things Vol.1 (a Netflix Original Series Soundtrack)</strong></div>
-                    <div class="song-subtitle">Kyle Dixon & Michael Stein</div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/aquietplace.jpeg" alt="">
-                    <div class="song-title"><strong>A quiet place</strong></div>
-                    <div class="song-subtitle">Subtitle</div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/split.jpeg" alt="">
-                    <div class="song-title"><strong>Split</strong></div>
-                    <div class="song-subtitle">Subtitle</div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/cure.jpeg" alt="">
-                    <div class="song-title"><strong>A cure for wellness</strong></div>
-                    <div class="song-subtitle">Subtitle</div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/sinister.jpeg" alt="">
-                    <div class="song-title"><strong>Sinister</strong></div>
-                    <div class="song-subtitle">Subtitle</div>
-                </div>
-            </div>    
-
-            <h4 class="playlist-title">Created for John Doe</h4>
-            <div class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</div>
-            <div class="first-row">
-                <div class="playlist">
-                    <img class="song" src="img/radar.jpeg" alt="">
-                    <div class="song-title"><strong>New release</strong></div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/mixdaily.jpeg" alt="">
-                    <div class="song-title"><strong>Daily mix 1</strong></div>
-                </div>
-            </div>
-            
-            <h4 class="playlist-title">Artisti più ascoltati</h4>
-            <div class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</div>
-            <div class="first-row">
-                <div class="playlist">
-                    <img class="song" src="img/youg.jpeg" alt="">
-                    <div class="song-title"><strong>New release</strong></div>
-                </div>
-                <div class="playlist">
-                    <img class="song" src="img/einaudi.jpeg" alt="">
-                    <div class="song-title"><strong>Daily mix 1</strong></div>
-                </div>
-            </div>
-        </div>    
-        <!-- /contenuto principale -->
-    </main>
-    <footer>
-        <div class="left">
-            <span><img class="footer-song" src="img/sinister.jpeg" alt=""></span>
-            <div>
-                <h6>Sinister</h6>
-                <div class="footer-song-subtitle">
-                    Brano <br>
-                    Nome
-                </div>
-            </div>
-            <div class="icon-left">
-                <i class="fa-regular fa-heart"></i> <br>
-                <i class="fa-regular fa-folder"></i>
-            </div>
-        </div>
-        <div class="middle">
-            <div class="play-bar">
-                <i class="fa-solid fa-shuffle"></i>
-                <i class="fa-solid fa-backward-step"></i>
-                <i class="fa-regular fa-circle-play"></i>
-                <i class="fa-solid fa-forward-step"></i>
-                <i class="fa-solid fa-rotate-right"></i>
-
-                <div class="time">
-                    <div class="song-time">0:25</div>
-                    <div class="progress-container">
-                        <div class="progress-bar"></div>
+                <!-- /settings -->
+            </aside>
+            <!-- /sidebar di sinistra -->
+            <!-- contenuto principale -->
+            <div class="content">
+                <!-- albums recently played -->
+                <section id="recently-played">
+                    <h2>Recently Played</h2>
+                    <!-- row albums -->
+                    <div class="albums">
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
+                        <!-- single album -->
+                        <div class="album">
+                            <div class="album-image">
+                                <img src="https://via.placeholder.com/350x250" alt="Album Image">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <!-- /single album -->
                     </div>
-                    <div class="song-time">4:35</div>
+                    <!-- /row albums -->
+                </section>
+                <!-- albums recently played -->
+            </div>
+            <!-- /contenuto principale -->
+        </main>
+        <footer>
+            <div class="footer-left"></div>
+            <div class="footer-center">
+                <div class="play">
+                    <div class="play-time">0:25</div>
+                    <div class="play-bar">
+                        <div class="play-bar-inner"></div>
+                    </div>
+                    <div class="play-time">3:20</div>
                 </div>
             </div>
-        </div>
-        <div class="right">
-            <div class="row">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-display"></i>
-                <i class="fa-solid fa-volume-high"></i>
-                <div class="progress-container-small">
-                    <div class="progress-bar-small"></div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+            <div class="footer-right"></div>
+        </footer>
+    </body>
 </html>
